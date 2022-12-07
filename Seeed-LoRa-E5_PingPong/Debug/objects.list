@@ -12,6 +12,7 @@
 "./Core/Src/syscalls.o"
 "./Core/Src/sysmem.o"
 "./Core/Src/system_stm32wlxx.o"
+"./Core/Src/tim.o"
 "./Core/Src/timer_if.o"
 "./Core/Src/usart.o"
 "./Core/Src/usart_if.o"

@@ -20,7 +20,7 @@
 #include "main.h"
 #include "app_subghz_phy.h"
 #include "gpio.h"
-
+#include "tim.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
@@ -129,6 +129,7 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
   MX_SubGHz_Phy_Init();
+  MX_TIM2_Init();
   /* USER CODE BEGIN 2 */
 	LED1_OFF
 	LED2_OFF
@@ -148,6 +149,9 @@ int main(void)
     /* USER CODE BEGIN 3 */
     if (HAL_GPIO_ReadPin(BOTAO1_GPIO_Port, BOTAO1_Pin)) {
     	codec_and_send_start_frame_rc();
+    	HAL_Delay(100);
+		while (HAL_GPIO_ReadPin(BOTAO1_GPIO_Port, BOTAO1_Pin)) {
+		}
     }
 	if (HAL_GPIO_ReadPin(BOTAO2_GPIO_Port, BOTAO2_Pin)) {
 		if (numero_vv < 5)
@@ -155,6 +159,7 @@ int main(void)
 		else
 			numero_vv = 1;
 		display_num(numero_vv);
+		HAL_Delay(100);
 		while (HAL_GPIO_ReadPin(BOTAO2_GPIO_Port, BOTAO2_Pin)) {
 		}
 	}
@@ -211,6 +216,17 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+
+/**
+  * @brief  Period elapsed callback in non blocking mode
+  * @param  htim : TIM handle
+  * @retval None
+  */
+void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
+{
+HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+}
+
 uint8_t display_num(uint8_t numero) {
 	DISPLAY1_OFF
 	DISPLAY2_OFF
