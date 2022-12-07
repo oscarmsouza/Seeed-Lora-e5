@@ -64,7 +64,7 @@ typedef enum
 #define RX_TIMEOUT_VALUE              3000
 #define TX_TIMEOUT_VALUE              3000
 /* PING string*/
-#define PING "PING"
+#define PING "PING22"
 /* PONG string*/
 #define PONG "PONG"
 /*Size of the payload to be sent*/

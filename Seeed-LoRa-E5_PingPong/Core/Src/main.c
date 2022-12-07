@@ -43,11 +43,14 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+uint8_t ativo;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
+uint8_t display_num(uint8_t numero);
+void teste_display(void);
+void teste_led(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -87,7 +90,11 @@ int main(void)
   MX_GPIO_Init();
   MX_SubGHz_Phy_Init();
   /* USER CODE BEGIN 2 */
-
+	LED1_OFF
+	LED2_OFF
+	teste_led();
+	uint8_t central_num = 0;
+	display_num(central_num);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -95,9 +102,21 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-    MX_SubGHz_Phy_Process();
+
 
     /* USER CODE BEGIN 3 */
+    if (HAL_GPIO_ReadPin(BOTAO1_GPIO_Port, BOTAO1_Pin)) {
+    	MX_SubGHz_Phy_Process();
+    }
+	if (HAL_GPIO_ReadPin(BOTAO2_GPIO_Port, BOTAO2_Pin)) {
+		if (central_num < 10)
+			central_num++;
+		else
+			central_num = 0;
+		display_num(central_num);
+		while (HAL_GPIO_ReadPin(BOTAO2_GPIO_Port, BOTAO2_Pin)) {
+		}
+	}
   }
   /* USER CODE END 3 */
 }
@@ -151,7 +170,169 @@ void SystemClock_Config(void)
 }
 
 /* USER CODE BEGIN 4 */
+uint8_t display_num(uint8_t numero) {
+	DISPLAY1_OFF
+	DISPLAY2_OFF
+	DISPLAY3_OFF
+	DISPLAY4_OFF
+	DISPLAY5_OFF
+	DISPLAY6_OFF
+	DISPLAY7_OFF
+	DISPLAY8_OFF
 
+	if (ativo)
+		DISPLAY4_ON
+	switch (numero) {
+	case 0:
+		DISPLAY1_ON
+		DISPLAY2_ON
+		DISPLAY3_ON
+		DISPLAY5_ON
+		DISPLAY7_ON
+		DISPLAY8_ON
+		break;
+	case 1:
+		DISPLAY8_ON
+		DISPLAY3_ON
+		break;
+	case 2:
+		DISPLAY7_ON
+		DISPLAY8_ON
+		DISPLAY6_ON
+		DISPLAY1_ON
+		DISPLAY2_ON
+		break;
+	case 3:
+		DISPLAY7_ON
+		DISPLAY8_ON
+		DISPLAY3_ON
+		DISPLAY2_ON
+		DISPLAY6_ON
+		break;
+	case 4:
+		DISPLAY5_ON
+		DISPLAY6_ON
+		DISPLAY8_ON
+		DISPLAY3_ON
+		break;
+	case 5:
+		DISPLAY7_ON
+		DISPLAY5_ON
+		DISPLAY6_ON
+		DISPLAY3_ON
+		DISPLAY2_ON
+		break;
+	case 6:
+		DISPLAY7_ON
+		DISPLAY5_ON
+		DISPLAY6_ON
+		DISPLAY1_ON
+		DISPLAY2_ON
+		DISPLAY3_ON
+		break;
+	case 7:
+		DISPLAY7_ON
+		DISPLAY8_ON
+		DISPLAY3_ON
+		break;
+	case 8:
+		DISPLAY1_ON
+		DISPLAY2_ON
+		DISPLAY3_ON
+		DISPLAY5_ON
+		DISPLAY6_ON
+		DISPLAY7_ON
+		DISPLAY8_ON
+
+		break;
+	case 9:
+
+		DISPLAY3_ON
+		DISPLAY5_ON
+		DISPLAY6_ON
+		DISPLAY7_ON
+		DISPLAY8_ON
+		DISPLAY2_ON
+
+		break;
+
+	default:
+		break;
+	}
+	return 0;
+}
+
+void teste_display(void) {
+	DISPLAY1_ON
+	HAL_Delay(100);
+	DISPLAY1_OFF
+	HAL_Delay(100);
+	DISPLAY2_ON
+	HAL_Delay(100);
+	DISPLAY2_OFF
+	HAL_Delay(100);
+	DISPLAY3_ON
+	HAL_Delay(100);
+	DISPLAY3_OFF
+	HAL_Delay(100);
+	DISPLAY4_ON
+	HAL_Delay(100);
+	DISPLAY4_OFF
+	HAL_Delay(100);
+	DISPLAY5_ON
+	HAL_Delay(100);
+	DISPLAY5_OFF
+	HAL_Delay(100);
+	DISPLAY6_ON
+	HAL_Delay(100);
+	DISPLAY6_OFF
+	HAL_Delay(100);
+	DISPLAY7_ON
+	HAL_Delay(100);
+	DISPLAY7_OFF
+	HAL_Delay(100);
+	DISPLAY8_ON
+	HAL_Delay(100);
+	DISPLAY8_OFF
+	HAL_Delay(100);
+	display_num(1);
+	HAL_Delay(300);
+	display_num(2);
+	HAL_Delay(300);
+	display_num(3);
+	HAL_Delay(300);
+	display_num(4);
+	HAL_Delay(300);
+	display_num(5);
+	HAL_Delay(300);
+	display_num(6);
+	HAL_Delay(300);
+	display_num(7);
+	HAL_Delay(300);
+	display_num(8);
+	HAL_Delay(300);
+	display_num(8);
+	HAL_Delay(300);
+	display_num(9);
+	HAL_Delay(300);
+	display_num(0);
+	HAL_Delay(300);
+	display_num(99);
+
+}
+
+void teste_led(void) {
+	LED1_OFF
+	LED2_OFF
+	LED1_ON
+	HAL_Delay(500);
+	LED1_OFF
+	HAL_Delay(100);
+	LED2_ON
+	HAL_Delay(500);
+	LED2_OFF
+	HAL_Delay(100);
+}
 /* USER CODE END 4 */
 
 /**

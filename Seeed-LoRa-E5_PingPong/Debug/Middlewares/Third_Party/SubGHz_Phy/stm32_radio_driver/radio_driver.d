@@ -43,10 +43,10 @@ Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_driver.o: \
  ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_system.h \
  ../Core/Inc/main.h \
  ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_gpio.h \
- C:/Users/johannes.florineth/STM32CubeIDE/LoRa-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h \
- C:/Users/johannes.florineth/STM32CubeIDE/LoRa-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h \
+ /Users/oscar/Documents/GitHub/Seeed-Lora-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h \
+ /Users/oscar/Documents/GitHub/Seeed-Lora-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h \
  ../Core/Inc/stm32wlxx_nucleo_conf.h \
- C:/Users/johannes.florineth/STM32CubeIDE/LoRa-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h \
+ /Users/oscar/Documents/GitHub/Seeed-Lora-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h \
  ../Core/Inc/subghz.h ../Utilities/misc/stm32_mem.h \
  ../Core/Inc/utilities_conf.h ../Drivers/CMSIS/Include/cmsis_compiler.h \
  ../Utilities/misc/stm32_tiny_vsnprintf.h ../Core/Inc/utilities_def.h \
@@ -100,10 +100,10 @@ Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/radio_driver.o: \
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_system.h:
 ../Core/Inc/main.h:
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_gpio.h:
-C:/Users/johannes.florineth/STM32CubeIDE/LoRa-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h:
-C:/Users/johannes.florineth/STM32CubeIDE/LoRa-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h:
+/Users/oscar/Documents/GitHub/Seeed-Lora-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_radio.h:
+/Users/oscar/Documents/GitHub/Seeed-Lora-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo_errno.h:
 ../Core/Inc/stm32wlxx_nucleo_conf.h:
-C:/Users/johannes.florineth/STM32CubeIDE/LoRa-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h:
+/Users/oscar/Documents/GitHub/Seeed-Lora-e5/Seeed-LoRa-E5_PingPong/Drivers/BSP/STM32WLxx_Nucleo/stm32wlxx_nucleo.h:
 ../Core/Inc/subghz.h:
 ../Utilities/misc/stm32_mem.h:
 ../Core/Inc/utilities_conf.h:

@@ -1,4 +1,7 @@
 ../Drivers/STM32WLxx_HAL_Driver/Inc/stm32wlxx_ll_rcc.h:1257:22:LL_RCC_LSE_SetDriveCapability	16	static
-../Core/Src/main.c:64:5:main	8	static
-../Core/Src/main.c:109:6:SystemClock_Config	112	static
-../Core/Src/main.c:161:6:Error_Handler	4	static,ignoring_inline_asm
+../Core/Src/main.c:67:5:main	16	static
+../Core/Src/main.c:128:6:SystemClock_Config	112	static
+../Core/Src/main.c:173:9:display_num	16	static
+../Core/Src/main.c:265:6:teste_display	8	static
+../Core/Src/main.c:324:6:teste_led	8	static
+../Core/Src/main.c:342:6:Error_Handler	4	static,ignoring_inline_asm
