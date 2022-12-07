@@ -62,7 +62,7 @@ void EXTI15_10_IRQHandler(void);
 void RTC_Alarm_IRQHandler(void);
 void SUBGHZ_Radio_IRQHandler(void);
 /* USER CODE BEGIN EFP */
-
+void TIM2_IRQHandler(void);
 /* USER CODE END EFP */
 
 #ifdef __cplusplus

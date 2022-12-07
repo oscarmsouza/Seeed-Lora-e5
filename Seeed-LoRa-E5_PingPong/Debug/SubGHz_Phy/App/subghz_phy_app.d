@@ -55,7 +55,8 @@ SubGHz_Phy/App/subghz_phy_app.o: ../SubGHz_Phy/App/subghz_phy_app.c \
  ../Middlewares/Third_Party/SubGHz_Phy/radio_ex.h \
  ../Utilities/timer/stm32_timer.h ../Utilities/sequencer/stm32_seq.h \
  ../Core/Inc/utilities_def.h ../SubGHz_Phy/App/app_version.h \
- ../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/subghz_phy_version.h
+ ../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/subghz_phy_version.h \
+ ../Core/Inc/main.h
 ../Core/Inc/platform.h:
 ../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wlxx.h:
 ../Drivers/CMSIS/Device/ST/STM32WLxx/Include/stm32wle5xx.h:
@@ -119,3 +120,4 @@ SubGHz_Phy/App/subghz_phy_app.o: ../SubGHz_Phy/App/subghz_phy_app.c \
 ../Core/Inc/utilities_def.h:
 ../SubGHz_Phy/App/app_version.h:
 ../Middlewares/Third_Party/SubGHz_Phy/stm32_radio_driver/subghz_phy_version.h:
+../Core/Inc/main.h:

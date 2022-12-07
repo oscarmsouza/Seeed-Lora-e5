@@ -1,7 +1,8 @@
-../SubGHz_Phy/App/subghz_phy_app.c:148:6:SubghzApp_Init	56	static
-../SubGHz_Phy/App/subghz_phy_app.c:241:13:PingPong_Process	8	static
-../SubGHz_Phy/App/subghz_phy_app.c:340:13:OnTxDone	8	static
-../SubGHz_Phy/App/subghz_phy_app.c:351:13:OnRxDone	40	static
-../SubGHz_Phy/App/subghz_phy_app.c:392:13:OnTxTimeout	8	static
-../SubGHz_Phy/App/subghz_phy_app.c:403:13:OnRxTimeout	8	static
-../SubGHz_Phy/App/subghz_phy_app.c:414:13:OnRxError	8	static
+../SubGHz_Phy/App/subghz_phy_app.c:149:6:SubghzApp_Init	56	static
+../SubGHz_Phy/App/subghz_phy_app.c:238:6:write_master_string	32	static,ignoring_inline_asm
+../SubGHz_Phy/App/subghz_phy_app.c:250:13:PingPong_Process	8	static
+../SubGHz_Phy/App/subghz_phy_app.c:349:13:OnTxDone	8	static
+../SubGHz_Phy/App/subghz_phy_app.c:360:13:OnRxDone	40	static
+../SubGHz_Phy/App/subghz_phy_app.c:401:13:OnTxTimeout	8	static
+../SubGHz_Phy/App/subghz_phy_app.c:412:13:OnRxTimeout	8	static
+../SubGHz_Phy/App/subghz_phy_app.c:423:13:OnRxError	8	static

@@ -28,7 +28,10 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <stdbool.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -132,7 +135,7 @@ extern "C" {
 void SubghzApp_Init(void);
 
 /* USER CODE BEGIN EFP */
-
+void write_master_string(uint8_t *dataMASTER);
 /* USER CODE END EFP */
 
 #ifdef __cplusplus

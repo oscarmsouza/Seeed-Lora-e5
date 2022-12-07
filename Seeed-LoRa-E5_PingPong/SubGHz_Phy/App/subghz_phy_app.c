@@ -30,6 +30,7 @@
 #include "utilities_def.h"
 #include "app_version.h"
 #include "subghz_phy_version.h"
+#include "main.h"
 /* USER CODE END Includes */
 
 /* External variables ---------------------------------------------------------*/
@@ -64,9 +65,9 @@ typedef enum
 #define RX_TIMEOUT_VALUE              3000
 #define TX_TIMEOUT_VALUE              3000
 /* PING string*/
-#define PING "PING22"
+char PING[64];
 /* PONG string*/
-#define PONG "PONG"
+char PONG[64];
 /*Size of the payload to be sent*/
 /* Size must be greater of equal the PING and PONG*/
 #define MAX_APP_BUFFER_SIZE          255
@@ -150,7 +151,7 @@ void SubghzApp_Init(void)
   /* USER CODE BEGIN SubghzApp_Init_1 */
 
   /* USER CODE END SubghzApp_Init_1 */
-	APP_LOG(TS_OFF, VLEVEL_M, "\n\rPING PONG\n\r");
+	APP_LOG(TS_OFF, VLEVEL_M, "\n\rREMOTE CONTROL - TEST\n\r");
 	  /* Get SubGHY_Phy APP version*/
 	  APP_LOG(TS_OFF, VLEVEL_M, "APPLICATION_VERSION: V%X.%X.%X\r\n",
 	          (uint8_t)(APP_VERSION_MAIN),
@@ -234,6 +235,14 @@ void SubghzApp_Init(void)
 
 /* USER CODE BEGIN EF */
 
+void write_master_string(uint8_t *dataMASTER)
+{
+	memset(PONG,64,0);
+	uint8_t tamanho = strlen((char*) dataMASTER);
+	APP_TPRINTF("Tx data = %s size = %d\r\n", dataMASTER, tamanho);
+	strncpy(PONG,dataMASTER,tamanho);
+	__NOP();
+}
 /* USER CODE END EF */
 
 /* Private functions ---------------------------------------------------------*/
